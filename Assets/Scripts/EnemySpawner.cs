@@ -14,9 +14,12 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
-        Instantiate(currentWave.GetEnemyPrefab(0),
+        for(int i = 0; i < currentWave.GetEnemyCount(); i++)
+        {
+            Instantiate(currentWave.GetEnemyPrefab(i),
             currentWave.GetStartingWaypoint().position,
-            Quaternion.identity);
+            Quaternion.identity, transform);
+        }
     }
 
     public WaveConfigSO GetCurrentWave()
