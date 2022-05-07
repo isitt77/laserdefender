@@ -10,4 +10,12 @@ public class DamageDealer : MonoBehaviour
     {
         return damage;
     }
+
+
+    public void DiedByCollision()
+    {
+        Destroy(gameObject);
+    }
+
+
 }
