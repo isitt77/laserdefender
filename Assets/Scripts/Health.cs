@@ -13,15 +13,13 @@ public class Health : MonoBehaviour
 
         if(damageDealer != null)
         {
-            TakeDamage();
+            TakeDamage(damageDealer.GetDamage());
             damageDealer.DiedByCollision();
         }
     }
 
-    void TakeDamage()
+    void TakeDamage(int damageTaken)
     {
-        DamageDealer damageDealer = FindObjectOfType<DamageDealer>();
-        int damageTaken = damageDealer.GetDamage();
         health -= damageTaken;
         if(health <= 0)
         {
