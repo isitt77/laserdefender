@@ -17,12 +17,19 @@ public class PlayerController : MonoBehaviour
     Vector2 minBoundary;
     Vector2 maxBoundary;
 
+    ProjectileBehavior projectileBehavior;
+
+    void Awake()
+    {
+        projectileBehavior = GetComponent<ProjectileBehavior>();    
+    }
+
     void Start()
     {
         InitBoundaries();    
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         PlayerMove();
@@ -40,7 +47,6 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
 
     void PlayerMove()
@@ -50,5 +56,13 @@ public class PlayerController : MonoBehaviour
         newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBoundary.x + paddingLeft, maxBoundary.x -paddingRight);
         newPos.y = Mathf.Clamp(transform.position.y + delta.y, minBoundary.y + paddingBottom, maxBoundary.y - paddingTop);
         transform.position = newPos;
+    }
+
+    void OnFire(InputValue value)
+    {
+        if(projectileBehavior != null)
+        {
+            projectileBehavior.isFiring = value.isPressed;
+        }
     }
 }

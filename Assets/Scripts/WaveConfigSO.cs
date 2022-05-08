@@ -16,7 +16,7 @@ public class WaveConfigSO : ScriptableObject
 
     public int GetEnemyCount()
     {
-        Debug.Log(enemyPrefabs.Count);
+        //Debug.Log(enemyPrefabs.Count);
         return enemyPrefabs.Count;
     }
 
