@@ -7,14 +7,19 @@ public class ProjectileBehavior : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] float projectileSpeed = 15f;
     [SerializeField] float projectileLifeTime = 1f;
-    [SerializeField] float fireRate = 0.2f;
+    [SerializeField] float fireRate = 1f;
+    [SerializeField] float fireRateVariance = 0.5f;
+    [SerializeField] bool useAI;
 
     Coroutine firingCoroutine;
     public bool isFiring;
 
     void Start()
     {
-        
+        if (useAI)
+        {
+            isFiring = true;
+        }
     }
 
 
@@ -49,7 +54,14 @@ public class ProjectileBehavior : MonoBehaviour
             }
 
             Destroy(instance, projectileLifeTime);
-            yield return new WaitForSeconds(fireRate);
+            yield return new WaitForSeconds(RandomizeFireRate());
         }
+    }
+
+    float RandomizeFireRate()
+    {
+        float randomRireRate = Random.Range(fireRate - fireRateVariance,
+                                            fireRate + fireRateVariance);
+        return Mathf.Abs(randomRireRate);
     }
 }

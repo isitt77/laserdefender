@@ -30,13 +30,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6360703262870367886}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &6360703262870367873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -199,6 +199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7152928547713446297, guid: 13bd162dc26924692bbc1fd480f30f2d, type: 3}
   projectileSpeed: 15
-  projectileLifeTime: 1
+  projectileLifeTime: 5
   fireRate: 0.2
   isFiring: 0
