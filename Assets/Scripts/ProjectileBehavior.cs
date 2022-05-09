@@ -9,10 +9,11 @@ public class ProjectileBehavior : MonoBehaviour
     [SerializeField] float projectileLifeTime = 1f;
     [SerializeField] float fireRate = 1f;
     [SerializeField] float fireRateVariance = 0.5f;
+    [SerializeField] float minFiringRate = 0.1f;
     [SerializeField] bool useAI;
 
     Coroutine firingCoroutine;
-    public bool isFiring;
+    [HideInInspector] public bool isFiring;
 
     void Start()
     {
@@ -62,6 +63,6 @@ public class ProjectileBehavior : MonoBehaviour
     {
         float randomRireRate = Random.Range(fireRate - fireRateVariance,
                                             fireRate + fireRateVariance);
-        return Mathf.Abs(randomRireRate);
+        return Mathf.Clamp(randomRireRate, minFiringRate, float.MaxValue);
     }
 }

@@ -178,7 +178,8 @@ MonoBehaviour:
   projectile: {fileID: 7152928547713446297, guid: b8f499490c8124e619b9be60128d5f06, type: 3}
   projectileSpeed: 15
   projectileLifeTime: 1
-  fireRate: 0.7
+  fireRate: 1
   fireRateVariance: 0.5
+  minFiringRate: 0.1
   useAI: 1
   isFiring: 0
