@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  hitExplosion: {fileID: 7007495638151816011, guid: 121573f88e2374f65900f4fd9435504f, type: 3}
 --- !u!114 &1691725674031512550
 MonoBehaviour:
   m_ObjectHideFlags: 0
