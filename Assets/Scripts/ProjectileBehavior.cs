@@ -15,6 +15,15 @@ public class ProjectileBehavior : MonoBehaviour
     Coroutine firingCoroutine;
     [HideInInspector] public bool isFiring;
 
+    AudioPlayer audioPlayer;
+
+
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();    
+    }
+
     void Start()
     {
         if (useAI)
@@ -52,8 +61,8 @@ public class ProjectileBehavior : MonoBehaviour
             if(rb2d != null)
             {
                 rb2d.velocity = -transform.up * projectileSpeed;
+                audioPlayer.PlayShootingClip();
             }
-
             Destroy(instance, projectileLifeTime);
             yield return new WaitForSeconds(RandomizeFireRate());
         }
