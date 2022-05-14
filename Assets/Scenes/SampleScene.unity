@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 282115321}
   - component: {fileID: 282115320}
   m_Layer: 5
-  m_Name: Score
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1178,6 +1178,7 @@ GameObject:
   - component: {fileID: 2003015952}
   - component: {fileID: 2003015951}
   - component: {fileID: 2003015950}
+  - component: {fileID: 2003015954}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1266,6 +1267,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2003015954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003015949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9557b654610f241eda55728f41fcd184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 346654249}
+  health: {fileID: 2129337696}
+  scoreText: {fileID: 282115320}
+--- !u!114 &2129337696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6478185414830860811, guid: a6ab9e02fabbe4a6f966107af1e21b46, type: 3}
+  m_PrefabInstance: {fileID: 6360703261977860745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fb026e2b1334f6682e4a7464341ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1112001392235612057
 PrefabInstance:
   m_ObjectHideFlags: 0
