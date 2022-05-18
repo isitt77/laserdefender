@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] float sceneDelayAmount;
 
     public void LoadMainMenu()
     {
@@ -20,7 +21,8 @@ public class LevelManager : MonoBehaviour
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene(2);
+        //SceneManager.LoadScene(2);
+        StartCoroutine(DelayScreenLoad(2, sceneDelayAmount));
     }
 
 
@@ -28,5 +30,11 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+
+    IEnumerator DelayScreenLoad(int sceneIndex, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneIndex);
     }
 }
