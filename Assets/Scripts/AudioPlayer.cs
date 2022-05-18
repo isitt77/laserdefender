@@ -15,10 +15,12 @@ public class AudioPlayer : MonoBehaviour
 
     static AudioPlayer instance;
 
-    public AudioPlayer GetInstance()
-    {
-        return instance;
-    }
+
+    // We won't use this but I'll leave it for reference.
+    //public AudioPlayer GetInstance()
+    //{
+    //    return instance;
+    //}
 
 
     void Awake()
