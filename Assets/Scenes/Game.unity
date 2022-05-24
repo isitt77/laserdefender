@@ -367,6 +367,9 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: eae904eff282e46a3a88c85579a30c53, type: 2}
   - {fileID: 11400000, guid: fe743846bad914c5bb538996f8cc2c78, type: 2}
+  - {fileID: 11400000, guid: 9703c99a8d074416b974487196f70231, type: 2}
+  - {fileID: 11400000, guid: 3e9db2821dd034f67a3c33b6ad89f07e, type: 2}
+  - {fileID: 11400000, guid: 6db37de13e27d45d7abc4d4564fd4768, type: 2}
   timeBetweenWaves: 1
 --- !u!1 &346654247
 GameObject:
